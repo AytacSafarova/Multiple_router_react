@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/pages/AdminPages/Home.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1664004756425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1664004762296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import AdminLayout from \"../../layout/Admin\"\r\n-export default function Contact(){\r\n+export default function Home(){\r\n     return<AdminLayout>\r\n         <div>\r\n-        Admin Contact Page\r\n+        Admin Home Page\r\n         </div></AdminLayout>\r\n         \r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1664004756425,
+            "name": "Commit-0",
+            "content": "import AdminLayout from \"../../layout/Admin\"\r\nexport default function Contact(){\r\n    return<AdminLayout>\r\n        <div>\r\n        Admin Contact Page\r\n        </div></AdminLayout>\r\n        \r\n}"
+        }
+    ]
+}

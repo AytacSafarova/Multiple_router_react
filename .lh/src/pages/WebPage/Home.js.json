@@ -1,0 +1,114 @@
+{
+    "sourceFile": "src/pages/WebPage/Home.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 24,
+            "patches": [
+                {
+                    "date": 1664002669849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1664002782808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import './App.css';\r\n import {Route,Routes,Link} from \"react-router-dom\"\r\n-import AdminLayout from './layout/Admin';\r\n-import WebLayout from './layout/Website';\r\n+import About from './About';\r\n \r\n function App() {\r\n   return (\r\n     <div className=\"App\">\r\n"
+                },
+                {
+                    "date": 1664002789081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import './App.css';\r\n import {Route,Routes,Link} from \"react-router-dom\"\r\n import About from './About';\r\n+import Contact from './Contact';\r\n \r\n function App() {\r\n   return (\r\n     <div className=\"App\">\r\n"
+                },
+                {
+                    "date": 1664002795357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         <nav>\r\n         <ul>\r\n           <li>\r\n             <Link className=\"link\" to=\"/admin\">\r\n-              Admin\r\n+              About\r\n             </Link>\r\n           </li>\r\n           <li>\r\n             <Link className=\"link\" to=\"/web\">\r\n"
+                },
+                {
+                    "date": 1664002800674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n             </Link>\r\n           </li>\r\n           <li>\r\n             <Link className=\"link\" to=\"/web\">\r\n-              List\r\n+              Contact\r\n             </Link>\r\n           </li>\r\n        \r\n         </ul>\r\n"
+                },
+                {
+                    "date": 1664002808191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     <div className=\"App\">\r\n         <nav>\r\n         <ul>\r\n           <li>\r\n-            <Link className=\"link\" to=\"/admin\">\r\n+            <Link className=\"link\" to=\"/about\">\r\n               About\r\n             </Link>\r\n           </li>\r\n           <li>\r\n"
+                },
+                {
+                    "date": 1664002818935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n               About\r\n             </Link>\r\n           </li>\r\n           <li>\r\n-            <Link className=\"link\" to=\"/web\">\r\n+            <Link className=\"link\" to=\"/\">\r\n               Contact\r\n             </Link>\r\n           </li>\r\n        \r\n"
+                },
+                {
+                    "date": 1664002826005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,17 +13,17 @@\n               About\r\n             </Link>\r\n           </li>\r\n           <li>\r\n-            <Link className=\"link\" to=\"/\">\r\n+            <Link className=\"link\" to=\"/contact\">\r\n               Contact\r\n             </Link>\r\n           </li>\r\n        \r\n         </ul>\r\n       </nav>\r\n      <Routes>\r\n-   <Route path='/admin' element={<AdminLayout/>}></Route>\r\n+   <Route path='/' element={<AdminLayout/>}></Route>\r\n    <Route path='/web' element={<WebLayout/>}></Route>\r\n \r\n      </Routes>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1664002833042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,10 +21,10 @@\n        \r\n         </ul>\r\n       </nav>\r\n      <Routes>\r\n-   <Route path='/' element={<AdminLayout/>}></Route>\r\n-   <Route path='/web' element={<WebLayout/>}></Route>\r\n+   <Route path='/about' element={<AdminLayout/>}></Route>\r\n+   <Route path='/contact' element={<WebLayout/>}></Route>\r\n \r\n      </Routes>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1664002839330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n        \r\n         </ul>\r\n       </nav>\r\n      <Routes>\r\n-   <Route path='/about' element={<AdminLayout/>}></Route>\r\n+   <Route path='/about' element={<About/>}></Route>\r\n    <Route path='/contact' element={<WebLayout/>}></Route>\r\n \r\n      </Routes>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1664002848978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,12 +22,12 @@\n         </ul>\r\n       </nav>\r\n      <Routes>\r\n    <Route path='/about' element={<About/>}></Route>\r\n-   <Route path='/contact' element={<WebLayout/>}></Route>\r\n+   <Route path='/contact' element={<Contact/>}></Route>\r\n \r\n      </Routes>\r\n     </div>\r\n   );\r\n }\r\n \r\n-export default App;\r\n+export default Home;\r\n"
+                },
+                {
+                    "date": 1664002861769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import {Route,Routes,Link} from \"react-router-dom\"\r\n import About from './About';\r\n import Contact from './Contact';\r\n \r\n-function App() {\r\n+function Home() {\r\n   return (\r\n     <div className=\"App\">\r\n         <nav>\r\n         <ul>\r\n"
+                },
+                {
+                    "date": 1664002916996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import './App.css';\r\n import {Route,Routes,Link} from \"react-router-dom\"\r\n import About from './About';\r\n import Contact from './Contact';\r\n+import \r\n \r\n function Home() {\r\n   return (\r\n-    <div className=\"App\">\r\n+    <div className=\"Home\">\r\n         <nav>\r\n         <ul>\r\n           <li>\r\n             <Link className=\"link\" to=\"/about\">\r\n"
+                },
+                {
+                    "date": 1664002922390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import './App.css';\r\n import {Route,Routes,Link} from \"react-router-dom\"\r\n import About from './About';\r\n import Contact from './Contact';\r\n-import \r\n+import WebLayout from '../../layout/Website';\r\n \r\n function Home() {\r\n   return (\r\n     <div className=\"Home\">\r\n"
+                },
+                {
+                    "date": 1664002929757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,9 @@\n import WebLayout from '../../layout/Website';\r\n \r\n function Home() {\r\n   return (\r\n-    <div className=\"Home\">\r\n-        <nav>\r\n+<WebLayout>        <nav>\r\n         <ul>\r\n           <li>\r\n             <Link className=\"link\" to=\"/about\">\r\n               About\r\n"
+                },
+                {
+                    "date": 1664002938318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n import WebLayout from '../../layout/Website';\r\n \r\n function Home() {\r\n   return (\r\n-<WebLayout>        <nav>\r\n+<WebLayout>     \r\n+       <nav>\r\n         <ul>\r\n           <li>\r\n             <Link className=\"link\" to=\"/about\">\r\n               About\r\n@@ -25,9 +26,9 @@\n    <Route path='/about' element={<About/>}></Route>\r\n    <Route path='/contact' element={<Contact/>}></Route>\r\n \r\n      </Routes>\r\n-    </div>\r\n+    </WebLayout>\r\n   );\r\n }\r\n \r\n export default Home;\r\n"
+                },
+                {
+                    "date": 1664003007701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,13 @@\n import './App.css';\r\n import {Route,Routes,Link} from \"react-router-dom\"\r\n import About from './About';\r\n import Contact from './Contact';\r\n-import WebLayout from '../../layout/Website';\r\n \r\n function Home() {\r\n   return (\r\n-<WebLayout>     \r\n-       <nav>\r\n+    <div className=\"Home\">\r\n+        <nav>\r\n         <ul>\r\n           <li>\r\n             <Link className=\"link\" to=\"/about\">\r\n               About\r\n@@ -26,9 +25,9 @@\n    <Route path='/about' element={<About/>}></Route>\r\n    <Route path='/contact' element={<Contact/>}></Route>\r\n \r\n      </Routes>\r\n-    </WebLayout>\r\n+    </div>\r\n   );\r\n }\r\n \r\n export default Home;\r\n"
+                },
+                {
+                    "date": 1664003048431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n    <Route path='/about' element={<About/>}></Route>\r\n    <Route path='/contact' element={<Contact/>}></Route>\r\n \r\n      </Routes>\r\n-    </div>\r\n+    </Web;>\r\n   );\r\n }\r\n \r\n export default Home;\r\n"
+                },
+                {
+                    "date": 1664003058091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import './App.css';\r\n import {Route,Routes,Link} from \"react-router-dom\"\r\n import About from './About';\r\n import Contact from './Contact';\r\n+import WebLayout from '../../layout/Website';\r\n \r\n function Home() {\r\n   return (\r\n     <div className=\"Home\">\r\n@@ -25,9 +26,9 @@\n    <Route path='/about' element={<About/>}></Route>\r\n    <Route path='/contact' element={<Contact/>}></Route>\r\n \r\n      </Routes>\r\n-    </Web;>\r\n+    </Weblo>\r\n   );\r\n }\r\n \r\n export default Home;\r\n"
+                },
+                {
+                    "date": 1664003063518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import WebLayout from '../../layout/Website';\r\n \r\n function Home() {\r\n   return (\r\n-    <div className=\"Home\">\r\n+    <WebLayout>\r\n         <nav>\r\n         <ul>\r\n           <li>\r\n             <Link className=\"link\" to=\"/about\">\r\n"
+                },
+                {
+                    "date": 1664003068938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n    <Route path='/about' element={<About/>}></Route>\r\n    <Route path='/contact' element={<Contact/>}></Route>\r\n \r\n      </Routes>\r\n-    </Weblo>\r\n+    </WebLayout>\r\n   );\r\n }\r\n \r\n export default Home;\r\n"
+                },
+                {
+                    "date": 1664003503743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,34 +1,34 @@\n-import './App.css';\r\n-import {Route,Routes,Link} from \"react-router-dom\"\r\n-import About from './About';\r\n-import Contact from './Contact';\r\n-import WebLayout from '../../layout/Website';\r\n+// import './App.css';\r\n+// import {Route,Routes,Link} from \"react-router-dom\"\r\n+// import About from './About';\r\n+// import Contact from './Contact';\r\n+// import WebLayout from '../../layout/Website';\r\n \r\n-function Home() {\r\n-  return (\r\n-    <WebLayout>\r\n-        <nav>\r\n-        <ul>\r\n-          <li>\r\n-            <Link className=\"link\" to=\"/about\">\r\n-              About\r\n-            </Link>\r\n-          </li>\r\n-          <li>\r\n-            <Link className=\"link\" to=\"/contact\">\r\n-              Contact\r\n-            </Link>\r\n-          </li>\r\n+// function Home() {\r\n+//   return (\r\n+//     <WebLayout>\r\n+//         <nav>\r\n+//         <ul>\r\n+//           <li>\r\n+//             <Link className=\"link\" to=\"/about\">\r\n+//               About\r\n+//             </Link>\r\n+//           </li>\r\n+//           <li>\r\n+//             <Link className=\"link\" to=\"/contact\">\r\n+//               Contact\r\n+//             </Link>\r\n+//           </li>\r\n        \r\n-        </ul>\r\n-      </nav>\r\n-     <Routes>\r\n-   <Route path='/about' element={<About/>}></Route>\r\n-   <Route path='/contact' element={<Contact/>}></Route>\r\n+//         </ul>\r\n+//       </nav>\r\n+//      <Routes>\r\n+//    <Route path='/about' element={<About/>}></Route>\r\n+//    <Route path='/contact' element={<Contact/>}></Route>\r\n \r\n-     </Routes>\r\n-    </WebLayout>\r\n-  );\r\n-}\r\n+//      </Routes>\r\n+//     </WebLayout>\r\n+//   );\r\n+// }\r\n \r\n-export default Home;\r\n+// export default Home;\r\n"
+                },
+                {
+                    "date": 1664004358164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,34 +0,0 @@\n-// import './App.css';\r\n-// import {Route,Routes,Link} from \"react-router-dom\"\r\n-// import About from './About';\r\n-// import Contact from './Contact';\r\n-// import WebLayout from '../../layout/Website';\r\n-\r\n-// function Home() {\r\n-//   return (\r\n-//     <WebLayout>\r\n-//         <nav>\r\n-//         <ul>\r\n-//           <li>\r\n-//             <Link className=\"link\" to=\"/about\">\r\n-//               About\r\n-//             </Link>\r\n-//           </li>\r\n-//           <li>\r\n-//             <Link className=\"link\" to=\"/contact\">\r\n-//               Contact\r\n-//             </Link>\r\n-//           </li>\r\n-       \r\n-//         </ul>\r\n-//       </nav>\r\n-//      <Routes>\r\n-//    <Route path='/about' element={<About/>}></Route>\r\n-//    <Route path='/contact' element={<Contact/>}></Route>\r\n-\r\n-//      </Routes>\r\n-//     </WebLayout>\r\n-//   );\r\n-// }\r\n-\r\n-// export default Home;\r\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664004364682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,9 @@\n-\n+import WebLayout from '../../layout/Website';\r\n+\r\n+export default function About(){\r\n+    return<WebLayout>\r\n+        <div>\r\n+        Web About Page\r\n+        </div></WebLayout>\r\n+        \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1664004372956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import WebLayout from '../../layout/Website';\r\n \r\n-export default function About(){\r\n+export default function Home(){\r\n     return<WebLayout>\r\n         <div>\r\n-        Web About Page\r\n+        Web Home Page\r\n         </div></WebLayout>\r\n         \r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1664002669849,
+            "name": "Commit-0",
+            "content": "import './App.css';\r\nimport {Route,Routes,Link} from \"react-router-dom\"\r\nimport AdminLayout from './layout/Admin';\r\nimport WebLayout from './layout/Website';\r\n\r\nfunction App() {\r\n  return (\r\n    <div className=\"App\">\r\n        <nav>\r\n        <ul>\r\n          <li>\r\n            <Link className=\"link\" to=\"/admin\">\r\n              Admin\r\n            </Link>\r\n          </li>\r\n          <li>\r\n            <Link className=\"link\" to=\"/web\">\r\n              List\r\n            </Link>\r\n          </li>\r\n       \r\n        </ul>\r\n      </nav>\r\n     <Routes>\r\n   <Route path='/admin' element={<AdminLayout/>}></Route>\r\n   <Route path='/web' element={<WebLayout/>}></Route>\r\n\r\n     </Routes>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default App;\r\n"
+        }
+    ]
+}

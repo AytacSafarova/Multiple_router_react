@@ -1,0 +1,66 @@
+{
+    "sourceFile": "src/App.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1663945791337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663945797758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,22 +2,9 @@\n \n function App() {\n   return (\n     <div className=\"App\">\n-      <header className=\"App-header\">\n-        <img src={logo} className=\"App-logo\" alt=\"logo\" />\n-        <p>\n-          Edit <code>src/App.js</code> and save to reload.\n-        </p>\n-        <a\n-          className=\"App-link\"\n-          href=\"https://reactjs.org\"\n-          target=\"_blank\"\n-          rel=\"noopener noreferrer\"\n-        >\n-          Learn React\n-        </a>\n-      </header>\n+     \n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1663999972636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,39 @@\n import './App.css';\n+import {Route,Routes} from \"react-router-dom\"\n+import AdminLayout from './layout/Admin';\n+import WebLayout from './layout/Website';\n \n function App() {\n   return (\n     <div className=\"App\">\n-     \n+        <nav>\n+        <ul>\n+          <li>\n+            <Link className=\"link\" to=\"/\">\n+              Home\n+            </Link>\n+          </li>\n+          <li>\n+            <Link className=\"link\" to=\"/list\">\n+              List\n+            </Link>\n+          </li>\n+          <li>\n+            <Link className=\"link\" to=\"/add\">\n+              Add\n+            </Link>\n+          </li>\n+          <li>\n+            <Link className=\"link\" to=\"/detail\">\n+              Detail\n+            </Link>\n+          </li>\n+        </ul>\n+      </nav>\n+     <Routes>\n+   <Route path='/admin' element={<AdminLayout/>}></Route>\n+     </Routes>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1663999980983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,18 +17,9 @@\n             <Link className=\"link\" to=\"/list\">\n               List\n             </Link>\n           </li>\n-          <li>\n-            <Link className=\"link\" to=\"/add\">\n-              Add\n-            </Link>\n-          </li>\n-          <li>\n-            <Link className=\"link\" to=\"/detail\">\n-              Detail\n-            </Link>\n-          </li>\n+       \n         </ul>\n       </nav>\n      <Routes>\n    <Route path='/admin' element={<AdminLayout/>}></Route>\n"
+                },
+                {
+                    "date": 1663999994868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     <div className=\"App\">\n         <nav>\n         <ul>\n           <li>\n-            <Link className=\"link\" to=\"/\">\n+            <Link className=\"link\" to=\"/admin\">\n               Home\n             </Link>\n           </li>\n           <li>\n"
+                },
+                {
+                    "date": 1664000007124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n               Home\n             </Link>\n           </li>\n           <li>\n-            <Link className=\"link\" to=\"/list\">\n+            <Link className=\"link\" to=\"/web\">\n               List\n             </Link>\n           </li>\n        \n"
+                },
+                {
+                    "date": 1664000022571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,10 @@\n         </ul>\n       </nav>\n      <Routes>\n    <Route path='/admin' element={<AdminLayout/>}></Route>\n+   <Route path='/admin' element={<AdminLayout/>}></Route>\n+\n      </Routes>\n     </div>\n   );\n }\n"
+                },
+                {
+                    "date": 1664000028029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n         </ul>\n       </nav>\n      <Routes>\n    <Route path='/admin' element={<AdminLayout/>}></Route>\n-   <Route path='/admin' element={<AdminLayout/>}></Route>\n+   <Route path='/web' element={<AdminLayout/>}></Route>\n \n      </Routes>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1664000038367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n         </ul>\n       </nav>\n      <Routes>\n    <Route path='/admin' element={<AdminLayout/>}></Route>\n-   <Route path='/web' element={<AdminLayout/>}></Route>\n+   <Route path='/web' element={}<AdminLayout.Route>\n \n      </Routes>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1664000048168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n         </ul>\n       </nav>\n      <Routes>\n    <Route path='/admin' element={<AdminLayout/>}></Route>\n-   <Route path='/web' element={}<AdminLayout.Route>\n+   <Route path='/web' element={}Route>\n \n      </Routes>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1664000057923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n         </ul>\n       </nav>\n      <Routes>\n    <Route path='/admin' element={<AdminLayout/>}></Route>\n-   <Route path='/web' element={}Route>\n+   <Route path='/web' element={<WebLayout/>}></Route>\n \n      </Routes>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1664001663758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+import './App.css';\n+import {Route,Routes},Lin from \"react-router-dom\"\n+import AdminLayout from './layout/Admin';\n+import WebLayout from './layout/Website';\n+\n+function App() {\n+  return (\n+    <div className=\"App\">\n+        <nav>\n+        <ul>\n+          <li>\n+            <Link className=\"link\" to=\"/admin\">\n+              Home\n+            </Link>\n+          </li>\n+          <li>\n+            <Link className=\"link\" to=\"/web\">\n+              List\n+            </Link>\n+          </li>\n+       \n+        </ul>\n+      </nav>\n+     <Routes>\n+   <Route path='/admin' element={<AdminLayout/>}></Route>\n+   <Route path='/web' element={<WebLayout/>}></Route>\n+\n+     </Routes>\n+    </div>\n+  );\n+}\n+\n+export default App;\n"
+                },
+                {
+                    "date": 1664001671953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import './App.css';\n-import {Route,Routes,Lin from \"react-router-dom\"\n+import {Route,Routes,Link from \"react-router-dom\"\n import AdminLayout from './layout/Admin';\n import WebLayout from './layout/Website';\n \n function App() {\n"
+                }
+            ],
+            "date": 1663945791337,
+            "name": "Commit-0",
+            "content": "import './App.css';\n\nfunction App() {\n  return (\n    <div className=\"App\">\n      <header className=\"App-header\">\n        <img src={logo} className=\"App-logo\" alt=\"logo\" />\n        <p>\n          Edit <code>src/App.js</code> and save to reload.\n        </p>\n        <a\n          className=\"App-link\"\n          href=\"https://reactjs.org\"\n          target=\"_blank\"\n          rel=\"noopener noreferrer\"\n        >\n          Learn React\n        </a>\n      </header>\n    </div>\n  );\n}\n\nexport default App;\n"
+        }
+    ]
+}
